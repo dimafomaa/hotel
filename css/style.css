@@ -1,0 +1,537 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: 'Inter', sans-serif;
+
+}
+.container{
+	max-width: 1220px;
+	padding: 0 10px;
+	margin: 0 auto;
+	scroll-behavior: smooth;
+}
+.header{
+	/* margin-top: 20px; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f9fbfd;
+	padding: 15px 0;
+	z-index: 10;
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.menu__list{
+	display: flex;
+}
+.menu__item + .menu__item{
+	margin-left: 32px;
+}
+.menu__link{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #192252;
+}
+
+.menu__link {
+	position: relative;
+	color: #0e1734; /*задаём цвет ссылки*/
+	cursor: pointer;
+	line-height: 1; /*задаём высоту строки*/
+	
+}
+.menu__link:after {
+	display: block;
+	position: absolute;
+	left: 50%; 
+	transform: translateX(-50%);
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #0e1734; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.menu__link:hover:after,
+.menu__link:focus:after {
+	width: 103%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.header__link{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background-color: #0e1734;
+	padding: 14px 30px;
+	border-radius: 4px;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+}
+.header__link:hover{
+	background-color: #f9fbfd;
+	color: #0e1734;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+	background-size: 4px 50px;
+}
+
+.home{
+	margin-top: 120px;
+	margin-bottom: 160px;
+}
+.home__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* flex-wrap: wrap; */
+}
+.home__item{
+	max-width: 585px;
+}
+.home__title{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 25px;
+}
+.home__subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	margin-bottom: 50px;
+	width: 485px;
+}
+.home__link{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background-color: #0e1734;
+	padding: 14px 30px;
+	border-radius: 4px;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+}
+.home__link:hover{
+	color: #0e1734;
+	background-color: rgb(255, 255, 255);
+	transition: all 0.4s ease-in-out;
+}
+.home__img + .home__img{
+	margin-left: 24px;
+}
+.home__img{
+	box-shadow: 10px 20px 35px 1px rgba(0, 0, 0, 0.082);
+}
+.home__img--down{
+	margin-top: 80px;
+}
+.hotel{
+	margin-bottom: 160px;
+}
+.hotel__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* flex-wrap: wrap; */
+}
+.hotel__image{
+	margin-right: 125px;
+}
+.hotel__title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 25px;
+}
+.hotel__subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	margin-bottom: 16px;
+}
+.hotel__sub{
+	margin-bottom: 50px;
+}
+.hotel__link{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background-color: #0e1734;
+	padding: 14px 30px;
+	border-radius: 4px;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+}
+.hotel__link:hover{
+	border: 2px solid #0e1734;
+	background-color: #fff;
+	color: #0e1734;
+	transition: all 0.4s ease-in-out;
+}
+.benefit{
+	margin-bottom: 160px;
+}
+.benefit__inner{
+	display: flex;
+	align-items: center;
+}
+.benefit__inner:not(:first-child){
+	margin-top: 30px;
+}
+.benefit__item{
+	margin-right: 120px;
+}
+.benefit__item--right{
+	margin-left: 120px;
+}
+.benefit__title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 25px;
+}
+.benefit__subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	width: 585px;
+}
+.room{
+	margin-bottom: 160px;
+}
+.room__item{
+	text-align: center;
+}
+.room__title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 25px;
+}
+.room__subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	margin-bottom: 50px;
+}
+.room__link{
+	display: inline-block;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background-color: #0e1734;
+	padding: 14px 30px;
+	border-radius: 4px;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+	margin-bottom: 80px;
+}
+.room__link:hover{
+	border: 2px solid #0e1734;
+	background-color: #fff;
+	color: #0e1734;
+	transition: all 0.4s ease-in-out;
+}
+.room__list{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.room__items + .room__items{
+	margin-left: 24px;
+}
+.room__items--title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 150%;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 16px;
+}
+.room__items--subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	margin-bottom: 30px;
+}
+.room__img{
+	margin-bottom: 30px;
+	transition: all 0.4s ease-in-out;
+	
+}
+
+.room__img:hover{
+	opacity: 0.8;
+	transition: all 0.4s ease-in-out;
+}
+.room__items--link{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #424F7B;
+	position: relative;
+
+}
+.room__items--link:after {
+	display: block;
+	position: absolute;
+	left: 50%; 
+	transform: translateX(-50%);
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #424F7B; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.room__items--link:hover:after,
+.room__items--link:focus:after {
+	width: 103%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+.booking{
+	margin-bottom: 115px;
+	background-color: #848fac11;
+	padding: 50px 0;
+}
+.booking__inner{
+	display: flex;
+	justify-content: space-between;
+}
+.booking__item{
+	max-width: 410px;
+}
+.booking__text{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #424F7B;
+	margin-bottom: 12px;
+}
+.booking__title{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 24px;
+}
+.booking__subtitle{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+	margin-bottom: 50px;
+}
+.booking__link{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background-color: #0e1734;
+	padding: 14px 30px;
+	border-radius: 4px;
+	border: 2px solid #0e1734;
+	transition: all 0.4s ease-in-out;
+	margin-right: 24px;
+}
+.booking__link:hover{
+	color: #0e1734;
+	background-color: #848fac11;
+	transition: all 0.4s ease-in-out;
+}
+.booking__link--room{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #0E1734;
+	position: relative;
+}
+.booking__link--room:after {
+	display: block;
+	position: absolute;
+	left: 50%; 
+	transform: translateX(-50%);
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #0e1734; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.booking__link--room:hover:after,
+.booking__link--room:focus:after {
+	width: 103%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+.booking__items{
+	max-width: 510px;
+}
+.booking__list--title{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 150%;
+	color: #424F7B;
+	background-color: #fff;
+	padding: 15px 20px;
+	margin-bottom: 24px;
+	border-radius: 4px;
+	box-shadow: 10px 20px 35px 1px rgba(0, 0, 0, 0.052);
+}
+.booking__list--text{
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #848FAC;
+}
+.comment{
+	margin-bottom: 115px;
+}
+.comment__inner{
+	text-align: center;
+}
+.comment__title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: #192252;
+	margin-bottom: 25px;
+	
+
+}
+.comment__people--img{
+	border-radius: 50%;
+	height: 120px;
+	margin-bottom: 44px;
+}
+.comment__text{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	text-align: center;
+	color: #848FAC;
+	margin-bottom: 40px;
+}
+.coomment__name{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 150%;
+	text-align: center;
+	color: #192252;
+}
+.footer{
+	padding: 120px 0;
+	background-color: #0B265A;
+}
+.footer__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items:flex-start;
+}
+.footer__items{
+	margin-right: 125px;
+}
+.footer__logo{
+	margin-bottom: 15px;
+}
+.footer__text{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 28px;
+	color: #D9DBDE;
+	width: 186px;
+	margin-bottom: 35px;
+}
+.social__list{
+	display: flex;
+	align-items: center;
+}
+.social__item + .social__item{
+	margin-left: 25px;
+}
+.social__img{
+	transition: all 0.4s ease-in-out;
+}
+.social__img:hover{
+	transform: scale(1.3);
+	transition: all 0.4s ease-in-out;
+}
+.footer__list--nav{
+	display: flex;
+}
+.footer__item--nav{
+	width: 120px;
+}
+.footer__item--nav + .footer__item--nav{
+	margin-left: 125px;
+}
+.footer__nav--title{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.01em;
+	color: #FFFFFF;
+	margin-bottom: 24px;
+}
+.footer__nav--link{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #D9DBDE;
+	position: relative;
+}
+.footer__nav--link + .footer__nav--link{
+	display: inline-block;
+	margin-top: 24px;
+}
+.footer__nav--link::after{
+	display: block;
+	position: absolute;
+	left: 50%; 
+	transform: translateX(-50%);
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #D9DBDE; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+.footer__nav--link:hover:after,
+.footer__nav--link:focus:after {
+	width: 103%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
